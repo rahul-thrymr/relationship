@@ -72,4 +72,8 @@ return ok("person-details  " + per.name() + " are deleted");
 }
 */
 } 
+public Result saved(){
+	return ok("saved");
+}
+
 }

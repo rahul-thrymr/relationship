@@ -19,3 +19,5 @@ GET  /detail                    controllers.HomeController.detail()
 GET		/detsubmit				controllers.HomeController.detsubmit()
 
 GET		/delete					controllers.HomeController.delete()
+
+GET		/saved					controllers.HomeController.saved()
