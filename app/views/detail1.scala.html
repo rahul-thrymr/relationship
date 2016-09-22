@@ -1,0 +1,13 @@
+@(myForm: Form[models.Detail])
+
+@helper.form(action = routes.HomeController.detsubmit()) {
+	
+<h1>Person Details</h1>
+
+@helper.inputText(myForm("income"))
+@helper.inputText(myForm("city"))
+
+
+<input type="submit" value="Store_Details" />&nbsp;&nbsp;<input type="reset" value="Reset" />
+
+}

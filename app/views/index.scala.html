@@ -1,0 +1,26 @@
+@(myForm: Form[models.Person])
+
+@helper.form(action = routes.HomeController.submit()) {
+<h1>Info about Person</h1>
+@helper.inputText(myForm("name"))
+@helper.inputText(myForm("lname"))
+@helper.inputText(myForm("password"))
+
+<input type="submit" value="Store_Details" />&nbsp;&nbsp;<input type="reset" value="Reset" />
+
+}
+
+<form action="@routes.HomeController.delete()" method="get">
+
+    Enter person id to be deleted  <select name="id">
+
+<option value="0">Select</option>
+
+@for(per <- Person.find.all()) {
+
+    <option value=@per.pId>@per.pId</option>
+
+   }
+    </select><br>
+                 <input type="submit" value="Delete"/>
+   </form>
